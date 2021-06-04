@@ -1,1 +1,1 @@
-# docker-hello
+# getting-started-docker
