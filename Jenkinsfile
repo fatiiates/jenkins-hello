@@ -1,17 +1,17 @@
 pipeline {
   agent { label "master" }
   stages {
-    stage("build") {
+    stage("Build") {
       steps {
         sh """
-          docker build -t hello_there .
+          docker build -t demo .
         """
       }
     }
-    stage("run") {
+    stage("Run") {
       steps {
         sh """
-          docker run --rm hello_there
+          docker run --rm -it -p 8080:8080 demo:latest
         """
       }
     }
