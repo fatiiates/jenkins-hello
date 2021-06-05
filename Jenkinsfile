@@ -11,7 +11,7 @@ pipeline {
     stage("Run") {
       steps {
         sh """
-          docker run --rm -p 8084:8084 demo:latest
+          docker run --rm -d -p 8084:8084 demo:latest
         """
       }
     }
